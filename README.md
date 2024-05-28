@@ -1,6 +1,6 @@
 ### ⬅️ literally batman
 
-trying to upload more of my work to github
+trying to commit more of my work publicly to github
 
 ive got a pretty awful habit of uploading almost nothing in fear of scrutiny
 
