@@ -1,10 +1,6 @@
-### ⬅️ literally batman
+### ⬅️ im literally batman
 
-trying to commit more of my work publicly to github
-
-ive got a pretty awful habit of uploading almost nothing in fear of scrutiny
-
-summer '24 is cooking and it's time to change that
+a lot of stuff is missing here because half my projects are under double-blind review, and im too self-conscious to push a good chunk of the other half. (I know, this is a bad habit. I'm trying to change it-- til then, enjoy whatever there is here).
 <!--
 **avi-amalanshu/avi-amalanshu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
