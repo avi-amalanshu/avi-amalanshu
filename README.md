@@ -4,4 +4,4 @@ star
 </a> 
 to vandalize
 
-vandals: <!-- manual -->
+vandals: <!-- manual --> ![sirmisscriesalot](https://avatars.githubusercontent.com/u/19360845){width=24 height=24} [@sirmisscriesalot](https://github.com/sirmisscriesalot)
