@@ -12,7 +12,7 @@ jobs:
         id: fetch
       - name: Update README
         run: |
-          if ! grep -q "${{ github.actor }}" README.md;\ then\ sed -i "/<!-- manual -->/ s|<!-- manual -->|<!-- manual --> ![${{ github.actor }}](https://avatars.githubusercontent.com/u/${{ github.actor_id }})\{width=24 height=24\} ${{ github.actor }}|g" README.md\ fi
+          if ! grep "${{ github.actor }}" README.md; then sed -i "/<!-- manual -->/ s|<!-- manual -->|<!-- manual --> ![${{ github.actor }}](https://avatars.githubusercontent.com/u/${{ github.actor_id }})\{width=24 height=24\} ${{ github.actor }}|g" README.md; fi
       - name: Commit & push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
