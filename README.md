@@ -4,4 +4,4 @@ star
 </a> 
 to vandalize
 
-vandals: <!-- manual --> 
+vandals: <!-- manual --> ![avi-amalanshu](https://avatars.githubusercontent.com/u/75572381{width=24 height=24}) avi-amalanshu 
