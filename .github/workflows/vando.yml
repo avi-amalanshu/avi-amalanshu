@@ -1,9 +1,4 @@
-on:
-  workflow_dispatch:
-    inputs:
-      visitor:
-        description: 'Enter your GitHub username'
-        required: true
+on: workflow_dispatch
 jobs:
   add-manual:
     runs-on: ubuntu-latest
@@ -14,9 +9,9 @@ jobs:
         id: fetch
       - name: Update README
         run: |
-          sed -i "/${{ github.event.inputs.visitor }}/! s|<!-- manual -->|<!-- manual --> ![${{ github.event.inputs.visitor }}]\ ${{ github.event.inputs.visitor }}|" README.md
+          sed -i "/${{ github.actor }}/! s|<!-- manual -->|<!-- manual --> ![${{ github.actor }}]\ ${{ github.actor }}|" README.md
       - name: Commit & push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Manual add: ${{ github.event.inputs.visitor }}"
+          commit_message: "${{ github.actor }} is a vandal!"
           file_pattern: README.md
