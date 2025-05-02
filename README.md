@@ -4,4 +4,4 @@ star
 </a> 
 to vandalize
 
-vandals:
+vandals: <!--manual-->
