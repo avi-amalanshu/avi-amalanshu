@@ -1,0 +1,26 @@
+on:
+  workflow_dispatch:
+    inputs:
+      visitor:
+        description: 'Enter your GitHub username'
+        required: true
+jobs:
+  add-manual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Fetch avatar
+        run: |
+          AVATAR=$(gh api /users/${{ github.event.inputs.visitor }} --jq .avatar_url)
+          echo "::set-output name=avatar::$AVATAR"
+        id: fetch
+      - name: Update README
+        run: |
+          sed -i "/${{ github.event.inputs.visitor }}/! s|<!-- manual -->|<!-- manual --> ![${{ github.event.inputs.visitor }}](${{ steps.fetch.outputs.avatar }})\ ${{ github.event.inputs.visitor }}|" README.md
+      - name: Commit & push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Manual add: ${{ github.event.inputs.visitor }}"
+          file_pattern: README.md
