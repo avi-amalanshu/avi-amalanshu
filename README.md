@@ -1,4 +1,4 @@
-<a href="https://github.com/OWNER/REPO/actions/workflows/manual-register.yml/dispatches?ref=main">
+<a href="https://github.com/avi-amalanshu/avi-amalanshu/actions/workflows/vando.yml/dispatches?ref=main">
     click here to vandalize
 </a>
 
