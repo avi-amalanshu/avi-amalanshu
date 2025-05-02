@@ -1,4 +1,7 @@
-on: workflow_dispatch
+on:
+  watch:
+    types: [started]
+  workflow_dispatch:
 jobs:
   add-manual:
     runs-on: ubuntu-latest
@@ -9,7 +12,7 @@ jobs:
         id: fetch
       - name: Update README
         run: |
-          sed -i "/${{ github.actor }}/! s|<!-- manual -->|<!-- manual --> ![${{ github.actor }}]\ ${{ github.actor }}|" README.md
+          sed -i "/${{ github.actor }}/! s|<!-- manual -->|<!-- manual --> ![${{ github.actor }}](https://avatars.githubusercontent.com/u/${{ github.actor_id }}?size=24])\ ${{ github.actor }}|g" README.md
       - name: Commit & push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
